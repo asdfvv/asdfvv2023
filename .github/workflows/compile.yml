@@ -199,7 +199,7 @@ jobs:
         token: ${{ secrets.REPO_TOKEN }}
         allowUpdates: true
         body: ${{ env.Tongzhi_Date }}
-        artifacts: "${{ env.BIN_PATH }}/*"
+        artifacts: "${{ env.BIN_PATH }}/*" 
         
     - name: 发送[在线更新固件]至云端2
       if: steps.autoup.outcome == 'success' && env.UPDATE_FIRMWARE_ONLINE == 'true' && env.REPO_TOKEN
